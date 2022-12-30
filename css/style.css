@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+hr{
+    margin-left: 400px;
+    margin-right: 400px;
+    border: 1px solid black;
+}
+#nav{
+    display: flex;
+    position: relative;
+}
+
+#nav::before{
+    background-color: black;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+#nav ul{
+    align-items: center;
+    display: flex;
+}
+#nav ul li{
+    list-style-type: none;
+}
+
+#nav ul li a{
+    border-radius: 20px;
+    font-size: 1.1rem;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+#nav ul li a:hover{
+    border: 0.5px solid white;
+}
+
+#logo{
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 1.8rem;
+    padding: 15px;
+    font-weight: bold;
+    color: white;
+    
+}
+
+.content{
+    display: flex;
+    padding: 20px;
+}
+.about p{
+    font-size: 1.2rem;
+
+}
+.gallery{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.gallery a img{
+    padding: 11px;
+    height: 260px;
+    width:max-content;
+    filter: grayscale(90%);
+    border-radius: 81px;
+}
+
+.gallery a img:hover{
+    filter: grayscale(0%);
+    transform: scale(1.1)
+}
+
+#home img{
+    padding-left: 13px;
+}
+
+.h-main{
+    text-align: center;
+    font-size: 2.2rem;
+    font-family: 'Red Hat Display', sans-serif;
+    text-decoration: underline;
+}
+
+#records{
+    padding: 15px;
+    padding-bottom: 50px;
+}
+
+#record-content div{
+    display: flex;
+    font-size: 1.3rem;
+}
+
+#record-content div img{
+    width: 400px;
+    filter: grayscale(60%);
+    /* position: absolute; */
+    /* float: right; */
+}
+
+#naughty{
+    padding-left: 40px;
+}
+
+#record-content ol{
+    font-family: 'Red Hat Display', sans-serif;
+    
+    padding-left: 75px;
+}
+
+
+#record-content div{
+    /* padding-top: 14px;
+    padding-bottom: 20px; */
+    justify-content: center;
+    
+}
+
+#images h1{
+    padding-top: 10px;
+}
+
+
+#record-content{
+    padding-top: 20px;
+}
+
+.about{
+    display: flex;
+    align-items: center;
+}
+
+#contact h1{
+    /* font-family: 'Bree Serif', serif; */
+    padding-top: 20px;
+    text-decoration: none;
+    padding-bottom: 20px;
+}
+
+input[type=text], textarea, input[type=email]{
+    display: flex;
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box;
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: rgb(102, 100, 100);
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #efefef;
+    padding: 20px;
+}
+
+#form{
+    padding-top: 20px;
+    /* text-align: center; */
+}
+
+#contact{
+    width: 70%;
+    margin: auto;
+    padding-bottom: 30px;
+}
+
+footer{
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 9px 20px;
+    font-size: 0.8rem;
+}
+
+/* lets make our website responsive */
+
+
+@media(max-width:760px){
+    #nav{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #nav ul{
+        align-items: center;
+        display: flex;
+        padding-bottom: 20px;
+        padding-left: 15px
+    }
+    #nav ul li a:hover{
+    border: 0px solid white;
+    }
+}
+
+
+@media(min-width:460px){
+
+    #nav{
+        display: flex;
+    }
+    #nav ul{
+        align-items: center;
+        display: flex;
+        padding-left: 12px
+    }
+    
+}
+
+
+@media(max-width:1100px){
+    .about{
+        /* color: red; */
+        text-align: justify;
+    }
+    .content{
+        display: block;
+        text-align: center;
+        padding-bottom: 15px;
+    }
+    .content img{
+        padding-top: 15px;
+    }
+}
+
+@media(max-width:960px){
+    #records{
+        padding-top: 0px;
+        justify-content: center;
+        padding-bottom: 50px;
+        display: flex;
+    }
+    #record-content{
+        display: flex;
+    }
+    #record-content div{
+        flex-direction: column;
+    }
+    #record-content ol{
+        padding-right: 30px;
+        text-align: justify;
+    }
+    #naughty{
+        margin: auto;
+        padding-top: 18px;
+    }
+}
